@@ -1,0 +1,383 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="AppTitle">Beauty Salons</sys:String>
+    <sys:String x:Key="WelcomeText">Welcome!</sys:String>
+    <sys:String x:Key="UsernameTB">username</sys:String>
+    <sys:String x:Key="PasswordTB">password</sys:String>
+    <sys:String x:Key="FirstNameTB">first name</sys:String>
+    <sys:String x:Key="LastNameTB">last name</sys:String>
+    <sys:String x:Key="EmailTB">email address</sys:String>
+    <sys:String x:Key="LoginBTN">Log In</sys:String>
+    <sys:String x:Key="FailedLoginMessage">Invalid username or password. Please try again.</sys:String>
+    <sys:String x:Key="NonEmptyLoginMessage">Username and password cannot be empty.</sys:String>
+    <sys:String x:Key="RegistrationQuestion">Don't have an account?</sys:String>
+    <sys:String x:Key="Register">Register</sys:String>
+    <sys:String x:Key="RegistrationPageTitle">Beauty Salons - Registration Page</sys:String>
+    <sys:String x:Key="LoginPageTitle">Beauty Salons - Login Page</sys:String>
+    <sys:String x:Key="RegistrationDescription">it's quick and easy</sys:String>
+    <sys:String x:Key="AlreadyHaveAccount">Already have an account?</sys:String>
+    <sys:String x:Key="CreateNewAccount">Create a new account</sys:String>
+    <sys:String x:Key="RegistrationSuccessful">Registration successful! Welcome, </sys:String>
+    <sys:String x:Key="RegistrationFailed">Registration failed. Please try again.</sys:String>
+    <sys:String x:Key="RegisterNewEmployee">Register New Employee</sys:String>
+    <sys:String x:Key="ShoppingCarts">Shopping Carts</sys:String>
+    <sys:String x:Key="Orders">Orders</sys:String>
+    <sys:String x:Key="ShoppingCart">Shopping Cart</sys:String>
+
+    <sys:String x:Key="ManagerMainPageTitle">Manager Main Page</sys:String>
+    <sys:String x:Key="BeautcianMainPageTitle">Beautician Main Page</sys:String>
+    <sys:String x:Key="ClientMainPageTitle">Client Main Page</sys:String>
+    <sys:String x:Key="EmployeeInformationTitle">Employee Indormation</sys:String>
+    <sys:String x:Key="ProductInformationTitle">Product Information</sys:String>
+    <sys:String x:Key="ServiceInformationTitle">Service Information</sys:String>
+    <sys:String x:Key="WelcomeMessage">Welcome</sys:String>
+    <sys:String x:Key="Information">Information</sys:String>
+    <sys:String x:Key="MyProfile">My Profile</sys:String>
+    <sys:String x:Key="MyCarts">My Carts</sys:String>
+    <sys:String x:Key="MyOrders">My Orders</sys:String>
+    <sys:String x:Key="MyInvoices">My Invoices</sys:String>
+    <sys:String x:Key="PriceListTitle">Price List</sys:String>
+    <sys:String x:Key="Invoice">Invoice</sys:String>
+
+    <sys:String x:Key="SalonInfoTab">Salon Info</sys:String>
+    <sys:String x:Key="EmployeesTab">Employees</sys:String>
+    <sys:String x:Key="ScheduleTab">Schedule</sys:String>
+    <sys:String x:Key="ServicesTab">Services</sys:String>
+    <sys:String x:Key="ProductsTab">Products</sys:String>
+    <sys:String x:Key="OrdersTab">Orders</sys:String>
+    <sys:String x:Key="InvoicesTab">Invoices</sys:String>
+    <sys:String x:Key="CartsTab">Carts</sys:String>
+    
+    <sys:String x:Key="ServiceTypes">Service Types</sys:String>
+    <sys:String x:Key="BillsTab">Bills</sys:String>
+    <sys:String x:Key="WeeklySchedule">Weekly Schedule</sys:String>
+    <sys:String x:Key="AvailableBeautySalons">Beauty Salon Portal</sys:String>
+
+    <sys:String x:Key="DayMonday">Monday</sys:String>
+    <sys:String x:Key="DayTuesday">Tuesday</sys:String>
+    <sys:String x:Key="DayWednesday">Wednesday</sys:String>
+    <sys:String x:Key="DayThursday">Thursday</sys:String>
+    <sys:String x:Key="DayFriday">Friday</sys:String>
+    <sys:String x:Key="DaySaturday">Saturday</sys:String>
+    <sys:String x:Key="DaySunday">Sunday</sys:String>
+
+    <sys:String x:Key="English">🌐 English</sys:String>
+    <sys:String x:Key="Serbian">🌐 Serbian</sys:String>
+    <sys:String x:Key="Light">☀️ Light</sys:String>
+    <sys:String x:Key="Dark">🌙 Dark</sys:String>
+    <sys:String x:Key="Neutral">🍃 Neutral</sys:String>
+
+    <sys:String x:Key="SelectLabel">SELECT</sys:String>
+    <sys:String x:Key="IdLabel">ID</sys:String>
+    <sys:String x:Key="NameLabel">NAME</sys:String>
+    <sys:String x:Key="ActionsLabel">ACTIONS</sys:String>
+    <sys:String x:Key="AddressLabel">ADDRESS</sys:String>
+    <sys:String x:Key="CityLabel">CITY</sys:String>
+    <sys:String x:Key="WorkingHoursLabel">WORKING HOURS⏱️</sys:String>
+    <sys:String x:Key="WorkingHoursManagerLabel">WORKING HOURS</sys:String>
+    <sys:String x:Key="PhoneLabel">PHONE</sys:String>
+    <sys:String x:Key="StartTimeLabel">START TIME</sys:String>
+    <sys:String x:Key="EndTimeLabel">END TIME</sys:String>
+    <sys:String x:Key="ContactInfoLabel">CONTACT INFORMATION📞</sys:String>
+    <sys:String x:Key="LocationInfoLabel">LOCATION🏠</sys:String>
+    <sys:String x:Key="BasicInfoLabel">BASIC INFO</sys:String>
+    <sys:String x:Key="UsernameLabel">USERNAME</sys:String>
+    <sys:String x:Key="EmailLabel">EMAIL</sys:String>
+    <sys:String x:Key="FirstNameLabel">FIRST NAME</sys:String>
+    <sys:String x:Key="LastNameLabel">LAST NAME</sys:String>
+    <sys:String x:Key="FullNameLabel">FULL NAME</sys:String>
+    <sys:String x:Key="PasswordLabel">PASSWORD</sys:String>
+    <sys:String x:Key="EmploymentDateLabel">EMPLOYMENT DATE</sys:String>
+    <sys:String x:Key="SalaryLabel">SALARY</sys:String>
+    <sys:String x:Key="TypeLabel">TYPE</sys:String>
+    <sys:String x:Key="OrderLabel">ORDER</sys:String>
+    <sys:String x:Key="PriceList">PRICE LIST🧾</sys:String>
+    <sys:String x:Key="PublicationDate">Publication date</sys:String>
+
+    <sys:String x:Key="PriceLabel">PRICE</sys:String>
+    <sys:String x:Key="DurationLabelFormat">DURATION (HH:MM:SS)</sys:String>
+    <sys:String x:Key="DurationLabel">DURATION</sys:String>
+    <sys:String x:Key="DescriptionLabel">DESCRIPTION</sys:String>
+    <sys:String x:Key="ServiceTypeIdLabel">SERVICE TYPE ID</sys:String>
+    <sys:String x:Key="ShiftNameLabel">SHIFT NAME</sys:String>
+    <sys:String x:Key="AvailabilityLabel">AVAILABILITY</sys:String>
+
+    <sys:String x:Key="EmployeesLabel">EMPLOYEES</sys:String>
+    <sys:String x:Key="ServicesLabel">SERVICES</sys:String>
+    <sys:String x:Key="ProductsLabel">PRODUCTS</sys:String>
+    <sys:String x:Key="ServiceTypesLabel">SERVICE TYPES</sys:String>
+    <sys:String x:Key="ShiftsLabel">SHIFTS</sys:String>
+
+    <sys:String x:Key="EditSalonInfoBTN">Edit Salon Information</sys:String>
+    <sys:String x:Key="SaveChangesBTN">Save changes</sys:String>
+    <sys:String x:Key="AllCities">All Cities</sys:String>
+    <sys:String x:Key="AllServices">All Services</sys:String>
+    
+    <sys:String x:Key="NamePlaceholder">Name</sys:String>
+    <sys:String x:Key="PricePlaceholder">Price</sys:String>
+    <sys:String x:Key="DurationPlaceholder">Duration (hh:mm:ss)</sys:String>
+    <sys:String x:Key="DescriptionPlaceholder">Description</sys:String>
+    <sys:String x:Key="TypeIdPlaceholder">Service Type ID</sys:String>
+    <sys:String x:Key="StartTimePlaceholder">Start time (hh:mm)</sys:String>
+    <sys:String x:Key="EndTimePlaceholder">End time (hh:mm)</sys:String>
+    <sys:String x:Key="FromDate">From Date:</sys:String>
+    <sys:String x:Key="ToDate">To Date:</sys:String>
+    <sys:String x:Key="NewWeeklySchedule">Create New Weekly Schedule</sys:String>
+    <sys:String x:Key="CreateSchedule">Create schedule</sys:String>
+    <sys:String x:Key="DatePickerPlaceholder">Select a date</sys:String>
+    <sys:String x:Key="SelectSchedule">Select Schedule: </sys:String>
+    <sys:String x:Key="City">City</sys:String>
+    <sys:String x:Key="ServiceType">Service type</sys:String>
+    <sys:String x:Key="ApplyFilter">Apply Filter</sys:String>
+    <sys:String x:Key="NoPhoneNumbers">No phone numbers available</sys:String>
+    <sys:String x:Key="DeliveryAddress">📍 Delivery Address:</sys:String>
+    <sys:String x:Key="DeliveryContact">📞 Contact:</sys:String>
+    <sys:String x:Key="DeliveryInformation">📍📞 Delivery Information</sys:String>
+    <sys:String x:Key="PlaceOrder">✅ Place Order</sys:String>
+    <sys:String x:Key="Checkout">✅ Checkout</sys:String>
+    <sys:String x:Key="OrderSummary">📦 Order Summary</sys:String>
+    <sys:String x:Key="ConfirmOrder">Confirm Order</sys:String>
+    <sys:String x:Key="OrderConfirmation">Order Confirmation</sys:String>
+    <sys:String x:Key="OrderAddress">Address:</sys:String>
+    <sys:String x:Key="OrderPhone">Phone:</sys:String>
+    <sys:String x:Key="SecureCheckoutTitle">💳 Secure Checkout</sys:String>
+    <sys:String x:Key="SecureCheckoutSubitle">Your order will be processed securely</sys:String>
+    <sys:String x:Key="TotalAmount">Total Amount:</sys:String>
+    <sys:String x:Key="Price">Price:</sys:String>
+    <sys:String x:Key="UpdateStatus">💾 Update Status</sys:String>
+    <sys:String x:Key="InvoiceDate">Invoice Date:</sys:String>
+    <sys:String x:Key="OrderDate">Order Date:</sys:String>
+    <sys:String x:Key="Client">Client:</sys:String>
+    <sys:String x:Key="Current">Current Status: </sys:String>
+    <sys:String x:Key="Loading">Loading...</sys:String>
+
+    <sys:String x:Key="NoSchedulesPlaceholder">No schedules available</sys:String>
+    <sys:String x:Key="LoadingSchedulesErrorPlaceholder">Error loading schedules</sys:String>
+
+    <sys:String x:Key="WorkingHoursClientLabel">Working hours</sys:String>
+
+    <sys:String x:Key="AddNewTitle">Please, enter the required data!</sys:String>
+   
+    <sys:String x:Key="AddServiceTitle">Add New Service</sys:String>
+    <sys:String x:Key="AddProductTitle">Add New Product</sys:String>
+    <sys:String x:Key="AddShiftTitle">Add New Shift</sys:String>
+    <sys:String x:Key="CreateScheduleTitle">Create New Schedule</sys:String>
+    <sys:String x:Key="ServiceTypesTitle">Service Types</sys:String>
+    <sys:String x:Key="AddServiceTypeTitle">Add New Service Type</sys:String>
+    <sys:String x:Key="ShiftsManagementTitle">Shifts Management</sys:String>
+    <sys:String x:Key="EditSalaryTitle">Salary change</sys:String>
+    <sys:String x:Key="EditSalaryDescription">Enter the appropriate salary amount:</sys:String>
+    <sys:String x:Key="AddToCartTitle">🛒 Add to Cart</sys:String>
+    <sys:String x:Key="SelectQuantityTitle">Select Quantity</sys:String>
+    <sys:String x:Key="Quantity">Quantity:</sys:String>
+    <sys:String x:Key="Total">Quantity:</sys:String>
+    <sys:String x:Key="UnitPrice">Unit Price: {0:F2} KM</sys:String>
+    <sys:String x:Key="CartSummary">{0} item(s) • {1:F2} KM</sys:String>
+    <sys:String x:Key="TotalItems">{0} item(s)</sys:String>
+    <sys:String x:Key="Items">items</sys:String>
+    <sys:String x:Key="InvoicesOverview">Invoices Overview</sys:String>
+    <sys:String x:Key="Refresh">🔄 Refresh</sys:String>
+    <sys:String x:Key="SalonInvoices">Salon Invoices</sys:String>
+    <sys:String x:Key="InvoiceManagementManager">Manage salon invoices and payments</sys:String>
+    <sys:String x:Key="ClientInvoices">My Invoices</sys:String>
+    <sys:String x:Key="InvoicesViewClient">View your order invoices and payment status</sys:String>
+    <sys:String x:Key="AllStatuses">ALL STATUSES</sys:String>
+    <sys:String x:Key="FilteredOrders">📦 Filtered Orders</sys:String>
+    <sys:String x:Key="OrdersNum">order(s)</sys:String>
+    <sys:String x:Key="Shown">shown</sys:String>
+    <sys:String x:Key="ChangingFilter">Try changing your filter.</sys:String>
+    <sys:String x:Key="TotalQuantity">Total: {0:F2} KM</sys:String>
+    <sys:String x:Key="NoOrdersYet">No orders yet</sys:String>
+
+    <sys:String x:Key="EmptyOrderHistory">Your order history will appear here once you make a purchase.</sys:String>
+    <sys:String x:Key="OrderHistory">OrderHistory</sys:String>
+    <sys:String x:Key="NumPlacedOrders">{0} orders placed</sys:String>
+    <sys:String x:Key="MarkedInProgress">Order marked as in progress!</sys:String>
+    <sys:String x:Key="MarkedDelivered">Order marked as delivered!</sys:String>
+    <sys:String x:Key="MarkedCancelled">Order has been cancelled.</sys:String>
+    <sys:String x:Key="StatusUpdatedSuccessfully">Order status updated successfully!</sys:String>
+    <sys:String x:Key="NewStatus">New status: </sys:String>
+    <sys:String x:Key="UpdateOrderStatus">🔄 Update Order Status</sys:String>
+    <sys:String x:Key="OrderId">📦 Order #{0}</sys:String>
+    <sys:String x:Key="SalonOrders">📦 Salon Orders</sys:String>
+    <sys:String x:Key="NoSalonOrders">No orders have been placed for your salon yet.</sys:String>
+    <sys:String x:Key="OrdersHistory">📦 Order History</sys:String>
+    <sys:String x:Key="SalonOrdersCount">{0} order(s) for your salon</sys:String>
+
+    <sys:String x:Key="ActiveCarts">🛒 Active Shopping Carts</sys:String>
+    <sys:String x:Key="CartsNum">{0} cart(s)</sys:String>
+    <sys:String x:Key="CartDescription">{0} item(s) • {1:F2} KM</sys:String>
+    <sys:String x:Key="MoreItemsLabel">... and {0} more item(s)</sys:String>
+    <sys:String x:Key="NoActiveCartsTitle">No active shopping carts</sys:String>
+    <sys:String x:Key="NoActiveCartsMessage">Start shopping to add items to your cart!</sys:String>
+    <sys:String x:Key="ErrorOpeningCartDetails">Error opening cart details.</sys:String>
+    <sys:String x:Key="OrderPlacedMessage">Order placed successfully!</sys:String>
+    <sys:String x:Key="ErrorDuringCheckout">Error during checkout.</sys:String>
+    <sys:String x:Key="ErrorLoadingSummary">Error loading summary.</sys:String>
+    <sys:String x:Key="NoActiveCarts">No active carts</sys:String>
+
+    <sys:String x:Key="EnterRequiredDataHeader">Please, enter the required data!</sys:String>
+    <sys:String x:Key="AddNewShiftHeader">Add New Shift</sys:String>
+    <sys:String x:Key="ServiceTypeNameHeader">Enter the name of the new service type</sys:String>
+
+    <sys:String x:Key="BtnCancel">Cancel</sys:String>
+    <sys:String x:Key="BtnEdit">Edit✎</sys:String>
+    <sys:String x:Key="BtnSave">Save✓</sys:String>
+    <sys:String x:Key="BtnDelete">Delete🗑</sys:String>
+    <sys:String x:Key="BtnSubmit">Submit✓</sys:String>
+    <sys:String x:Key="BtnAddNew">Add New</sys:String>
+    <sys:String x:Key="BtnAddShift">Add Shift</sys:String>
+    <sys:String x:Key="BtnServiceTypes">Service Types</sys:String>
+    <sys:String x:Key="BtnAddServiceType">Add Service Type</sys:String>
+    <sys:String x:Key="BtnReset">Reset Schedule</sys:String>
+    <sys:String x:Key="BtnResetFilters">Reset Filters</sys:String>
+    <sys:String x:Key="ViewDetails">View Details ℹ️</sys:String>
+    <sys:String x:Key="BtnViewPriceList">price list</sys:String>
+    <sys:String x:Key="BtnOrder">order</sys:String>
+    <sys:String x:Key="BtnClose">Close</sys:String>
+    <sys:String x:Key="BtnClearCart">🗑️ Clear Cart</sys:String>
+    <sys:String x:Key="BtnCheckout">✅ Checkout</sys:String>
+    <sys:String x:Key="BtnUpdate">✓ Update</sys:String>
+    <sys:String x:Key="BtnMarkPaid">✓ Mark Paid</sys:String>
+    <sys:String x:Key="BtnViewDetails">👁 Details</sys:String>
+    <sys:String x:Key="BtnYes">Yes</sys:String>
+    <sys:String x:Key="BtnNo">No</sys:String>
+    <sys:String x:Key="BtnCancelOrder">cancel order</sys:String>
+
+    <!--Enums-->
+    <!--InvoiceStatus-->
+    <sys:String x:Key="PaidEnumBadge">✓ PAID</sys:String>
+    <sys:String x:Key="PendingEnumBadge">⏳ PENDING</sys:String>
+    <sys:String x:Key="CancelledEnumBadge">⚠ CANCELLED</sys:String>
+    <sys:String x:Key="PaidEnum">PAID</sys:String>
+    <sys:String x:Key="PendingEnum">PENDING</sys:String>
+    <sys:String x:Key="CancelledEnum">CANCELLED</sys:String>
+    <!--AccountType-->
+    <sys:String x:Key="ClientEnum">Client</sys:String>
+    <sys:String x:Key="BeauticianEnum">Beautician</sys:String>
+    <sys:String x:Key="ManagerEnum">Manager</sys:String>
+    <!--OrderStatus-->
+    <sys:String x:Key="PendingOrderEnum">PENDING</sys:String>
+    <sys:String x:Key="InProgressOrderEnum">IN PROGRESS</sys:String>
+    <sys:String x:Key="DeliveredOrderEnum">DELIVERED</sys:String>
+    <sys:String x:Key="CancelledOrderEnum">CANCELEED</sys:String>
+
+    <sys:String x:Key="Available">Available</sys:String>
+    <sys:String x:Key="Unavailable">Unavailable</sys:String>
+    <sys:String x:Key="Unknown">Unknown</sys:String>
+
+    <sys:String x:Key="ValidationError">Validation Error</sys:String>
+    <sys:String x:Key="SalaryValidationError">Please enter a valid salary amount.</sys:String>
+    <sys:String x:Key="AllFieldsRequired">All fields are required.</sys:String>
+    <sys:String x:Key="PriceValidationError">Price must be a valid number.</sys:String>
+    <sys:String x:Key="TimeValidationError">Time must be in a valid format (hh:mm:ss).</sys:String>
+    <sys:String x:Key="ServiceTypeValidationError">Service type ID must be a valid number.</sys:String>
+    <sys:String x:Key="ServiceAddedSuccess">Service added successfully!</sys:String>
+    <sys:String x:Key="ProductAddedSuccess">Product added successfully!</sys:String>
+    <sys:String x:Key="ShiftAddedSuccess">Shift added successfully.</sys:String>
+    <sys:String x:Key="ServiceTypeAddedSuccess">Service type added successfully!</sys:String>
+    <sys:String x:Key="AddServiceError">Error adding new service!</sys:String>
+    <sys:String x:Key="AddProductError">Error adding new product!</sys:String>
+    <sys:String x:Key="AddShiftError">Error adding shift. The shift name may already exist.</sys:String>
+    <sys:String x:Key="ServiceTypeExistsError">This type already exists.</sys:String>
+    <sys:String x:Key="ProductNotIdentified">Unable to identify the selected product.</sys:String>
+    <sys:String x:Key="ProductUnavailable">This product is currently unavailable.</sys:String>
+    <sys:String x:Key="ProductAdded">Added {0}x {1} to your cart!</sys:String>
+    <sys:String x:Key="ProductAddFailed">Failed to add product to cart. Please try again.</sys:String>
+    <sys:String x:Key="CartEmpty">Cart is empty.</sys:String>
+    <sys:String x:Key="CannotCheckout">Cannot Checkout</sys:String>
+    <sys:String x:Key="CartCleared">Cart cleared successfully.</sys:String>
+    <sys:String x:Key="PartialRemovePartialRemove">Some items could not be removed.</sys:String>
+    <sys:String x:Key="PartialSuccess">Partial Success</sys:String>
+    <sys:String x:Key="MsgSelectQuantity">Please select a valid quantity.</sys:String>
+    <sys:String x:Key="EnterAddress">Please enter a delivery address.</sys:String>
+    <sys:String x:Key="EnterPhone">Please enter a contact phone number.</sys:String>
+    <sys:String x:Key="OrderFailed">Failed to place order. Please try again.</sys:String>
+    <sys:String x:Key="OrderError">An error occurred while placing the order.</sys:String>
+    <sys:String x:Key="FailedToRemoveItem">Failed to remove item.</sys:String>
+    <sys:String x:Key="FailedToUpdateQuantity">Failed to update quantity.</sys:String>
+    <sys:String x:Key="FailedToUpdateStatus">Failed to update status.</sys:String>
+    <sys:String x:Key="FailedToCancelOrder">Failed to cancel order</sys:String>
+    <sys:String x:Key="ConfirmCancelOrder">Confirm order cancellation</sys:String>
+    <sys:String x:Key="OrderCancelled">Order canceled</sys:String>
+
+    <sys:String x:Key="UpdateError">Error updating service type</sys:String>
+
+    <sys:String x:Key="ConfirmDelete">Are you sure? This action cannot be undone.</sys:String>
+    <sys:String x:Key="ConfirmDeletion">❓    deletion confirmation</sys:String>
+    
+    <sys:String x:Key="MsgSuccessUpdate">Information has been successfully updated.</sys:String>
+    <sys:String x:Key="MsgErrorUpdate">Error updating information.</sys:String>
+
+    <sys:String x:Key="ConfirmLogoutQuestion">Are you sure you want to log out?</sys:String>
+    <sys:String x:Key="ConfirmLogout">Confirm Logout</sys:String>
+
+    <sys:String x:Key="DeletedSuccess">Deleted successfully!</sys:String>
+    <sys:String x:Key="DeleteFailed">An error occurred while deleting.</sys:String>
+
+    <sys:String x:Key="LoadingError">Error loading information.</sys:String>
+    <!--<sys:String x:Key="ErrorLoadingEmployees">No employees found.</sys:String>-->
+    
+
+    <sys:String x:Key="NoMatches">No beauty salons found matching your criteria.</sys:String>
+    <sys:String x:Key="NoMatchingOrders">No matching orders.</sys:String>
+    <sys:String x:Key="NoEmplyeesInformation">No information about employees is available.</sys:String>
+    <sys:String x:Key="NoOrders">No orders found.</sys:String>
+    <sys:String x:Key="NoCartsAndOrders">No carts or orders found.</sys:String>
+    <sys:String x:Key="EmptyCart">Your cart is empty.</sys:String>
+    <sys:String x:Key="NoInvoicesFound">No invoices found</sys:String>
+    <sys:String x:Key="NoInvoicesDescription">Invoices will appear here once orders are completed</sys:String>
+
+
+    <sys:String x:Key="SuccessfulAddition">Added successfully!</sys:String>
+    <sys:String x:Key="AdditionError">Error adding new item.</sys:String>
+    <sys:String x:Key="TypeExistsError">This type already exists.</sys:String>
+    <sys:String x:Key="ScheduleDateError">From date must be before to date.</sys:String>
+    <sys:String x:Key="ScheduleCreatedSuccessfully">Schedule created successfully.</sys:String>
+    <sys:String x:Key="ScheduleCreateError">Error creating schedule.</sys:String>
+    <sys:String x:Key="ScheduleLoadingError">Schedule not found.</sys:String>
+    <sys:String x:Key="MsgSuccessSave">Saved successfully.</sys:String>
+    <sys:String x:Key="MsgErrorSave">There were errors saving the schedule.</sys:String>
+    <sys:String x:Key="MsgFilterError">Error applying filters.</sys:String>
+
+    <sys:String x:Key="RequiredFieldsError">All fields are required.</sys:String>
+    <sys:String x:Key="ProductRequiredFieldsError">Name and Price are required.</sys:String>
+    <sys:String x:Key="InvalidPrice">Price must be a valid number.</sys:String>
+    <sys:String x:Key="InvalidType">Service type ID must be a valid number.</sys:String>
+    <sys:String x:Key="InvalidDuration">Duration time must be in a valid format (hh:mm:ss).</sys:String>
+    <sys:String x:Key="NewServiceTypeError">Please enter a name for the service type.</sys:String>
+
+    <sys:String x:Key="ChangeThemeTooltip">Change theme</sys:String>
+    <sys:String x:Key="ChangeLanguageTooltip">Change Language</sys:String>
+    <sys:String x:Key="LogoutTooltip">Log Out</sys:String>
+    <sys:String x:Key="MyProfileTooltip">My profile</sys:String>
+    <sys:String x:Key="EditTooltip">edit</sys:String>
+    <sys:String x:Key="DeleteTooltip">delete</sys:String>
+    <sys:String x:Key="SubmitTooltip">submit</sys:String>
+    <sys:String x:Key="SaveTooltip">save</sys:String>
+    <sys:String x:Key="AddNewTooltip">add New</sys:String>
+    <sys:String x:Key="AddTooltip">add new service type</sys:String>
+    <sys:String x:Key="CloseTooltip">close</sys:String>
+    <sys:String x:Key="OrderTooltip">order product</sys:String>
+    <sys:String x:Key="RefreshTooltip">refresh</sys:String>
+    <sys:String x:Key="IncreaseTooltip">increase</sys:String>
+    <sys:String x:Key="DecreaseTooltip">decrease</sys:String>
+    <sys:String x:Key="SearchBoxTooltip">enter search text</sys:String>
+    <sys:String x:Key="SearchTooltip">search by name, city or adress</sys:String>
+    <sys:String x:Key="SearchButtonTooltip">search</sys:String>
+
+    <sys:String x:Key="Success">success</sys:String>
+    <sys:String x:Key="Error">error</sys:String>
+    <sys:String x:Key="Status">status</sys:String>
+    <sys:String x:Key="Info">info</sys:String>
+    <sys:String x:Key="InvoiceDetailsTitle">Invoice Details</sys:String>
+
+    <sys:String x:Key="MarkInvoiceAsPaid">Mark invoice #{0} as paid?</sys:String>
+    <sys:String x:Key="ClearCartConfirmation">Are you sure you want to clear the entire cart?</sys:String>
+    <sys:String x:Key="ConfirmMarkOrder">Are you sure you want to mark this order as {0}? This action cannot be undone.</sys:String>
+    <sys:String x:Key="ConfirmRemoveFromCart">Are you sure you want to remove {0} from cart?</sys:String>
+    <sys:String x:Key="InvoiceClient">Client: {0} {1}</sys:String>
+    
+</ResourceDictionary>

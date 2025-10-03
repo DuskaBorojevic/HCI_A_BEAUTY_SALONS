@@ -1,0 +1,70 @@
+﻿<Window x:Class="HCI_A.Windows.CreateScheduleDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="{DynamicResource CreateScheduleTitle}" 
+        Height="320" Width="480"
+        WindowStartupLocation="CenterOwner"
+        FontFamily="{DynamicResource DefaultFont}"
+        ResizeMode="NoResize"
+        Background="{DynamicResource BackgroundBrush}">
+
+    <Grid Margin="20" MaxWidth="400" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{DynamicResource NewWeeklySchedule}" 
+                   FontSize="18" FontWeight="Bold"
+                   Foreground="{DynamicResource PrimaryBrush}"
+                   Margin="0,0,0,20" 
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="1" 
+                   Text="{DynamicResource FromDate}" 
+                   FontWeight="SemiBold" 
+                   Margin="0,0,0,5"/>
+        <DatePicker Grid.Row="2" 
+                    x:Name="FromDatePicker" 
+                    Margin="0,0,0,15" 
+                    SelectedDate="{Binding Today, Mode=OneWay}"
+                    Tag="{DynamicResource DatePickerPlaceholder}"/>
+
+        <TextBlock Grid.Row="3" 
+                   Text="{DynamicResource ToDate}" 
+                   FontWeight="SemiBold" 
+                   Margin="0,0,0,5"/>
+        <DatePicker Grid.Row="4" 
+                    x:Name="ToDatePicker" 
+                    Margin="0,0,0,20" 
+                    SelectedDate="{Binding NextWeek, Mode=OneWay}"
+                    Tag="{DynamicResource DatePickerPlaceholder}"/>
+        
+        <StackPanel Grid.Row="5" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Margin="0,10,0,0">
+            <Button Style="{DynamicResource SecondaryTextButton}"
+                    Content="{DynamicResource BtnCancel}" 
+                    MinWidth="100"
+                    Padding="20,8" Margin="0,0,10,0"
+                    BorderThickness="1" 
+                    Click="CancelButton_Click"/>
+            <Button Style="{DynamicResource SuccessTextButton}"
+                    Content="{DynamicResource BtnSubmit}" 
+                    MinWidth="100"
+                    Padding="20,8" Margin="10,0,0,0"
+                    Background="{DynamicResource SuccessBrush}" 
+                    Foreground="White" 
+                    BorderThickness="0" 
+                    Click="CreateButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

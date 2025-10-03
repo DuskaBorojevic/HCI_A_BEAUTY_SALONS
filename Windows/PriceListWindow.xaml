@@ -1,0 +1,219 @@
+﻿<Window x:Class="HCI_A.Windows.PriceListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource PriceListTitle}"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        Background="{DynamicResource BackgroundBrush}"
+        FontFamily="{DynamicResource DefaultFont}"
+        AllowsTransparency="False">
+
+    <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <DockPanel Grid.Row="0" Background="{DynamicResource PrimaryBrush}" Height="40" LastChildFill="True">
+                <TextBlock Text="{DynamicResource PriceListTitle}"
+                           FontFamily="{DynamicResource TitleFont}"
+                           VerticalAlignment="Center"
+                           Margin="15,0,0,0"
+                           Foreground="White"
+                           FontSize="16"
+                           FontWeight="Bold"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+
+                    <Button Content="—"
+                            Width="40" Height="40"
+                            Background="Transparent"
+                            Foreground="White"
+                            FontSize="16"
+                            BorderThickness="0"
+                            Click="Minimize_Click"/>
+
+                    <Button Content="⬜"
+                            Width="40" Height="40"
+                            Background="Transparent"
+                            Foreground="White"
+                            FontSize="14"
+                            BorderThickness="0"
+                            Click="MaximizeRestore_Click"/>
+
+                    <Button Content="X"
+                            Width="40" Height="40"
+                            Background="Transparent"
+                            Foreground="White"
+                            FontSize="14"
+                            BorderThickness="0"
+                            Click="Close_Click"/>
+                </StackPanel>
+            </DockPanel>
+            
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0"
+                        CornerRadius="15"
+                        Margin="20,15,20,10"
+                        Padding="20"
+                        Background="{DynamicResource PrimaryBrush}"
+                        Effect="{DynamicResource DefaultShadow}">
+                    <StackPanel>
+                        <TextBlock x:Name="SalonNameTextBlock"
+                                   FontFamily="{DynamicResource TitleFont}"
+                                   FontSize="26"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,0,0,8"/>
+                        <TextBlock x:Name="PriceListIdTextBlock"
+                                   Text="{DynamicResource PriceList}"
+                                   FontFamily="{DynamicResource SecondaryFont}"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"
+                                   Foreground="White"
+                                   Margin="0,0,0,4"/>
+                        <TextBlock x:Name="PublicationDateTextBlock"
+                                   FontFamily="{DynamicResource SecondaryFont}"
+                                   FontSize="14"
+                                   Foreground="#FFDCE6"/>
+                    </StackPanel>
+                </Border>
+
+                <TabControl Grid.Row="1"
+                            Margin="20,0,20,20"
+                            Background="Transparent"
+                            BorderThickness="0">
+
+                    <TabItem Header="{DynamicResource ServicesTab}" FontSize="14" FontWeight="SemiBold">
+                        <DataGrid x:Name="ServicesDataGrid"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  CanUserAddRows="False"
+                                  AlternatingRowBackground="{DynamicResource SecondaryLightBrush2}"
+                                  RowBackground="{DynamicResource SecondaryLightBrush}"
+                                  AlternationCount="2"
+                                  BorderThickness="1"
+                                  BorderBrush="White"
+                                  HeadersVisibility="Column"
+                                  GridLinesVisibility="Horizontal"
+                                  RowHeight="36">
+
+                            <!--<Setter Property="Background" Value="{DynamicResource PrimaryDarkBrush}" />-->
+                            <DataGrid.Resources>
+
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                    <Setter Property="Padding" Value="8,4"/>
+                                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+                                </Style>
+                                <Style TargetType="DataGridRow">
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource PrimaryDarkBrush}"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                    <Setter Property="Padding" Value="8,4"/>
+                                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+                                </Style>
+                            </DataGrid.Resources>
+                            
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource NameLabel}" Binding="{Binding Name}" Width="250"/>
+                                <DataGridTextColumn Header="{DynamicResource PriceLabel}" Binding="{Binding Price, StringFormat={}{0} KM}" Width="120"/>
+                                <DataGridTextColumn Header="{DynamicResource DurationLabel}" Binding="{Binding DurationTime}" Width="120"/>
+                                <DataGridTextColumn Header="{DynamicResource DescriptionLabel}" Binding="{Binding Description}" Width="*"/>
+                                <DataGridTextColumn Header="{DynamicResource TypeLabel}" Binding="{Binding ServiceType.Name}" Width="120"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+
+                    <!--AlternatingRowBackground="{DynamicResource SecondaryLightBrush}"
+                      RowBackground="{DynamicResource PrimaryBrush}"-->
+                    <TabItem Header="{DynamicResource ProductsTab}" FontSize="14" FontWeight="SemiBold">
+                    <DataGrid x:Name="ProductsDataGrid"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      AlternatingRowBackground="{DynamicResource SecondaryLightBrush2}"
+                      RowBackground="{DynamicResource SecondaryLightBrush}"
+                      AlternationCount="2"
+                      BorderThickness="1"
+                      BorderBrush="{DynamicResource BorderBrush}"
+                      HeadersVisibility="Column"
+                      GridLinesVisibility="Horizontal"
+                      RowHeight="36">
+
+                            <DataGrid.Resources>
+
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
+                                    <Setter Property="Foreground" Value="White"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                    <Setter Property="Padding" Value="8,4"/>
+                                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+                                </Style>
+                                <Style TargetType="DataGridRow">
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource PrimaryDarkBrush}"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                                    <Setter Property="Padding" Value="8,4"/>
+                                    <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}"/>
+                                </Style>
+                            </DataGrid.Resources>
+
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{DynamicResource NameLabel}" Binding="{Binding Name}" Width="300"/>
+                                <DataGridTextColumn Header="{DynamicResource DescriptionLabel}" Binding="{Binding Description}" Width="*"/>
+                                <DataGridTextColumn Header="{DynamicResource PriceLabel}" Binding="{Binding Price, StringFormat={}{0} KM}" Width="120"/>
+                                <DataGridTemplateColumn Header="{DynamicResource AvailabilityLabel}" Width="120">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Availability, Converter={StaticResource BoolToAvailabilityConverter}}"
+                                            Foreground="{Binding Availability, Converter={StaticResource BoolToColorConverter}}"/>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                                <DataGridTemplateColumn Header="{DynamicResource OrderLabel}" Width="100">
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Click="OrderButton_Click"
+                            IsEnabled="{Binding Availability}"
+                            Width="40" Height="40"
+                            Background="{DynamicResource BackgroundBrush}"
+                            Foreground="{DynamicResource PrimaryLightBrush}"
+                            BorderThickness="0"
+                            ToolTip="{DynamicResource OrderTooltip}"
+                            Cursor="Hand">
+                                                <TextBlock Text="🛒"
+                                   FontWeight="Bold"
+                                   FontSize="20"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"/>
+                                            </Button>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

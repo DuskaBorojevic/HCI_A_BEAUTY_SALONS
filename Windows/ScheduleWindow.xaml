@@ -1,0 +1,130 @@
+﻿<UserControl x:Class="HCI_A.Windows.ScheduleWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:local="clr-namespace:HCI_A.Windows"
+      mc:Ignorable="d"
+      FontFamily="{DynamicResource DefaultFont}"
+      Background="{DynamicResource BackgroundBrush}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="15,15,15,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="{DynamicResource SelectSchedule}" Foreground="{DynamicResource TextBrush}" VerticalAlignment="Center" Margin="0,0,10,0" FontWeight="SemiBold"/>
+                <ComboBox x:Name="ScheduleComboBox" MinWidth="250" Margin="0,0,15,0" SelectionChanged="ScheduleComboBox_SelectionChanged"/>
+            </StackPanel>
+
+            <Button x:Name="CreateScheduleButton" Grid.Column="1" Content="{DynamicResource CreateSchedule}" 
+                  Padding="15,8,15,8" Style="{DynamicResource PrimaryTextButton}" Foreground="White" 
+                  BorderThickness="0" Cursor="Hand" Click="CreateScheduleButton_Click"/>
+        </Grid>
+
+
+        <Grid Grid.Row="1" Margin="15">
+            <TabControl x:Name="MainTabControl" BorderThickness="0">
+
+                <TabItem Header="{DynamicResource WeeklySchedule}">
+                    <ScrollViewer Background="{DynamicResource CardBrush}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+
+                            <Border BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" 
+                                    Style="{DynamicResource CardStyle}" Background="{DynamicResource CardBrush}"
+                                  CornerRadius="4" Margin="0,0,0,15" Padding="15">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Text="{DynamicResource FromDate}" FontWeight="SemiBold" Margin="0,0,10,0" VerticalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextBrush}"/>
+                                    <TextBlock x:Name="FromDateBlock" Grid.Column="1" VerticalAlignment="Center" FontSize="13" Foreground="{DynamicResource TextBrush}"/>
+                                    <TextBlock Text="{DynamicResource ToDate}" Grid.Column="2" FontWeight="SemiBold" Margin="20,0,10,0" VerticalAlignment="Center" FontSize="14" Foreground="{DynamicResource TextBrush}"/>
+                                    <TextBlock x:Name="ToDateBlock" Grid.Column="3" VerticalAlignment="Center" FontSize="13" Foreground="{DynamicResource TextBrush}"/>
+                                </Grid>
+                            </Border>
+
+
+                            <Grid x:Name="ScheduleTable" Grid.Row="1" Margin="0,0,0,15"/>
+
+
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" 
+                                      Margin="0,15,0,0">
+          
+                                <Button x:Name="DeleteScheduleButton" 
+                                        Content="{DynamicResource BtnDelete}" 
+                                        Style="{DynamicResource ErrorTextButton}"
+                                        Padding="20,8" Margin="0,0,10,20"
+                                        Click="DeleteScheduleButton_Click"/>
+                                <Button x:Name="SaveScheduleButton" 
+                                        Content="{DynamicResource BtnSubmit}" 
+                                        Style="{DynamicResource SuccessTextButton}"
+                                        Margin="0,0,10,20"
+                                        Padding="20,8"
+                                        Click="SaveScheduleButton_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </TabItem>
+
+                <TabItem Header="{DynamicResource ShiftsManagementTitle}" HorizontalAlignment="Left" Width="115">
+                    <ScrollViewer Background="{DynamicResource CardBrush}">
+                        <StackPanel x:Name="ShiftsPanel" Margin="0,10,0,0" >
+
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{DynamicResource ShiftsManagementTitle}" Margin="10, 0, 0, 0" Padding="10, 0, 0, 0" FontSize="18" FontWeight="Bold" VerticalAlignment="Center"/>
+                                <Button x:Name="AddShiftButton"
+                                Style="{StaticResource AddButton}"
+                                Click="AddShiftButton_Click"
+                                Grid.Column="1"
+                                HorizontalAlignment="Right"
+                                Margin="10,0,0,10">
+                                    <Path Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"
+                                       Fill="White" Stretch="Uniform" Width="16" Height="16"/>
+                                </Button>
+                            </Grid>
+
+                            <Grid Margin="0,0,0,10" HorizontalAlignment="Left" MaxWidth="800">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="200" x:Name="ActionsColumn"/>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="{DynamicResource NameLabel}" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="0"/>
+                                <TextBlock Text="{DynamicResource StartTimeLabel}" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="1"/>
+                                <TextBlock Text="{DynamicResource EndTimeLabel}" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="2"/>
+                                <!--<TextBlock Text="{DynamicResource ActionsHeader}" FontWeight="Bold" HorizontalAlignment="Center" Grid.Column="3"/>-->
+                            </Grid>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</UserControl>

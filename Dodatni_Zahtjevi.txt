@@ -1,0 +1,20 @@
+Svi dodatni zahtjevi su ispunjeni.
+
+1. Podrška za različite tipove (barem dva) korisničkih naloga:
+Klijent
+Kozmetičar
+Menadžer
+
+2. Internacionalizacija:
+sprski jezik
+engleski jezik
+
+3. Korisnička podešavanja (teme):
+svijetla
+tamna
+neutralna
+
+4. Korisničko upustvo
+
+
+Link do GitHub repozitorijuma: 

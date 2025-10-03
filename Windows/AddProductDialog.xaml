@@ -1,0 +1,92 @@
+﻿<Window x:Class="HCI_A.Windows.AddProductDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource AddProductTitle}"
+        Height="400" Width="620"
+        Background="{DynamicResource BackgroundBrush}"
+        WindowStartupLocation="CenterOwner"
+        FontFamily="{DynamicResource DefaultFont}"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+
+    <Grid Background="{DynamicResource BackgroundBrush}">
+        <Border Background="{DynamicResource ElevatedSurfaceBrush}"
+                CornerRadius="12"
+                Padding="20"
+                Margin="20"
+                BorderThickness="1"
+                BorderBrush="{DynamicResource BorderBrush}"
+                Effect="{DynamicResource MaterialShadow}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0"
+                           Text="{DynamicResource EnterRequiredDataHeader}"
+                           FontSize="18"
+                           FontWeight="SemiBold"
+                           Margin="0,0,0,20"
+                           Foreground="{DynamicResource PrimaryBrush}"/>
+
+                <StackPanel Grid.Row="1" Margin="0,0,0,10">
+                    <Grid Margin="0,0,0,12">
+                        <TextBox x:Name="NameTextBox" Padding="10,8"/>
+                        <TextBlock Text="{DynamicResource NamePlaceholder}"
+                                   Foreground="{DynamicResource TextSecondaryBrush}"
+                                   Margin="12,10,0,0"
+                                   VerticalAlignment="Center"
+                                   IsHitTestVisible="False"
+                                   Visibility="{Binding Text, ElementName=NameTextBox, Converter={StaticResource EmptyTextToVisibilityConverter}}"/>
+                    </Grid>
+
+                    <Grid Margin="0,0,0,12">
+                        <TextBox x:Name="PriceTextBox" Padding="10,8"/>
+                        <TextBlock Text="{DynamicResource PricePlaceholder}"
+                                   Foreground="{DynamicResource TextSecondaryBrush}"
+                                   Margin="12,10,0,0"
+                                   VerticalAlignment="Center"
+                                   IsHitTestVisible="False"
+                                   Visibility="{Binding Text, ElementName=PriceTextBox, Converter={StaticResource EmptyTextToVisibilityConverter}}"/>
+                    </Grid>
+
+                    <Grid Margin="0,0,0,12">
+                        <TextBox x:Name="DescriptionTextBox" Padding="10,8"/>
+                        <TextBlock Text="{DynamicResource DescriptionPlaceholder}"
+                                   Foreground="{DynamicResource TextSecondaryBrush}"
+                                   Margin="12,10,0,0"
+                                   VerticalAlignment="Center"
+                                   IsHitTestVisible="False"
+                                   Visibility="{Binding Text, ElementName=DescriptionTextBox, Converter={StaticResource EmptyTextToVisibilityConverter}}"/>
+                    </Grid>
+
+                    <StackPanel Margin="0,0,0,0">
+                        <TextBlock Text="{DynamicResource AvailabilityLabel}"
+                                   Margin="2,0,0,4"
+                                   Foreground="{DynamicResource TextSecondaryBrush}"/>
+                        <ComboBox x:Name="AvailabilityComboBox"
+                                  Padding="10,6"
+                                  SelectedIndex="0">
+                            <ComboBoxItem Content="{DynamicResource Available}"/>
+                            <ComboBoxItem Content="{DynamicResource Unavailable}"/>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <Button Style="{DynamicResource SecondaryTextButton}"
+                            Content="{DynamicResource BtnCancel}"
+                            Padding="20,10"
+                            Margin="0,0,8,0"
+                            Click="Cancel_Click"/>
+                    <Button Style="{DynamicResource SuccessTextButton}"
+                            Content="{DynamicResource BtnSubmit}"
+                            Padding="20,10"
+                            Click="Submit_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

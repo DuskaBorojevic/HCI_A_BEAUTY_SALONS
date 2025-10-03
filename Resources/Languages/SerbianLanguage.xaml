@@ -1,0 +1,378 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="AppTitle">Kozmetički saloni</sys:String>
+    <sys:String x:Key="WelcomeText">Dobro došli!</sys:String>
+    <sys:String x:Key="Information">Informacije</sys:String>
+    <sys:String x:Key="MyProfile">Moj Profil</sys:String>
+    <sys:String x:Key="MyCarts">Moje Korpe</sys:String>
+    <sys:String x:Key="MyOrders">Moje narudžbe</sys:String>
+    <sys:String x:Key="MyInvoices">Moji računi</sys:String>
+    <sys:String x:Key="Invoice">Račun</sys:String>
+    <sys:String x:Key="UsernameTB">korisničko ime</sys:String>
+    <sys:String x:Key="PasswordTB">lozinka</sys:String>
+    <sys:String x:Key="FirstNameTB">ime</sys:String>
+    <sys:String x:Key="LastNameTB">prezime</sys:String>
+    <sys:String x:Key="EmailTB">email adresa</sys:String>
+    <sys:String x:Key="LoginBTN">Prijavite se</sys:String>
+    <sys:String x:Key="FailedLoginMessage">Pogrešno korisničko ime ili lozinka. Molimo, pokušajte ponovo.</sys:String>
+    <sys:String x:Key="NonEmptyLoginMessage">Korisničko ime i lozinka su obavezni.</sys:String>
+    <sys:String x:Key="RegistrationQuestion">Nemate nalog?</sys:String>
+    <sys:String x:Key="Register">Registrujte se</sys:String>
+    <sys:String x:Key="RegistrationPageTitle">Kozmetički saloni - Stranica Za Registraciju</sys:String>
+    <sys:String x:Key="LoginPageTitle">Kozmetički saloni - Stranica Za Prijavu</sys:String>
+    <sys:String x:Key="AlreadyHaveAccount">Već imate nalog?</sys:String>
+    <sys:String x:Key="CreateNewAccount">Kreiraj novi nalog</sys:String>
+    <sys:String x:Key="RegistrationDescription">brzo je i jednostano</sys:String>
+    <sys:String x:Key="RegistrationSuccessful">Uspješno ste se registrovali! Dobro došli,</sys:String>
+    <sys:String x:Key="RegistrationFailed">Registracija nije uspjela. Molimo, pokušajte ponovo.</sys:String>
+    <sys:String x:Key="RegisterNewEmployee">Registrujte Novog Zaposlenog</sys:String>
+    <sys:String x:Key="ShoppingCarts">Korpe za kupovinu</sys:String>
+    <sys:String x:Key="Orders">Narudžbe</sys:String>
+    <sys:String x:Key="ShoppingCart">Korpa za kupovinu</sys:String>
+
+    <sys:String x:Key="ManagerMainPageTitle">Menadžer - glavna stranica</sys:String>
+    <sys:String x:Key="BeautcianMainPageTitle">Kozmetičar - glavna stranica</sys:String>
+    <sys:String x:Key="ClientMainPageTitle">Klijent - glavna stranica</sys:String>
+    <sys:String x:Key="EmployeeInformationTitle">Informacije o zaposlenom</sys:String>
+    <sys:String x:Key="ProductInformationTitle">Informacije o proizvodu</sys:String>
+    <sys:String x:Key="ServiceInformationTitle">Informacije o usluzi</sys:String>
+    <sys:String x:Key="WelcomeMessage">Dobro došli</sys:String>
+    <sys:String x:Key="ProductInformationDescription">Informacije o proizvodu</sys:String>
+    <sys:String x:Key="ServiceInformationDescription">Informacije o usluzi</sys:String>
+    <sys:String x:Key="AvailableBeautySalons">Portal za kozmetičke salone</sys:String>
+    <sys:String x:Key="PriceListTitle">Cjenovnik</sys:String>
+
+    <sys:String x:Key="SalonInfoTab">Informacije o salonu</sys:String>
+    <sys:String x:Key="EmployeesTab">Zaposleni</sys:String>
+    <sys:String x:Key="ScheduleTab">Raspored</sys:String>
+    <sys:String x:Key="ServicesTab">Usluge</sys:String>
+    <sys:String x:Key="ProductsTab">Proizvodi</sys:String>
+    <sys:String x:Key="OrdersTab">Narudžbe</sys:String>
+    <sys:String x:Key="InvoicesTab">Računi</sys:String>
+    <sys:String x:Key="CartsTab">Korpe</sys:String>
+    <sys:String x:Key="ServiceTypes">Tipovi usluga</sys:String>
+    <sys:String x:Key="BillsTab">Računi</sys:String>
+    
+    <sys:String x:Key="WeeklySchedule">Sedmični Raspored</sys:String>
+    <sys:String x:Key="City">Grad</sys:String>
+    <sys:String x:Key="ServiceType">Tip usluge</sys:String>
+    <sys:String x:Key="ApplyFilter">Primijeni Filter</sys:String>
+    <sys:String x:Key="NoPhoneNumbers">Nema dostupnih brojeva telefona</sys:String>
+    <sys:String x:Key="DeliveryAddress">📍 Adresa dostave:</sys:String>
+    <sys:String x:Key="DeliveryContact">📞 Telefon:</sys:String>
+    <sys:String x:Key="DeliveryInformation">📍📞 Informacije o dostavi</sys:String>
+    <sys:String x:Key="PlaceOrder">✅ Naruči</sys:String>
+    <sys:String x:Key="Checkout">✅ Plaćanje</sys:String>
+    <sys:String x:Key="OrderSummary">📦 Pregled Narudžbe</sys:String>
+    <sys:String x:Key="ConfirmOrder">Potvrdi narudžbu</sys:String>
+    <sys:String x:Key="OrderConfirmation">Potvrda narudžbe</sys:String>
+    <sys:String x:Key="OrderAddress">Adresa:</sys:String>
+    <sys:String x:Key="OrderPhone">Kontakt telefon:</sys:String>
+    <sys:String x:Key="SecureCheckoutTitle">💳 Sigurna naplata</sys:String>
+    <sys:String x:Key="SecureCheckoutSubitle">Vaša narudžba će biti sigurno obrađena</sys:String>
+    <sys:String x:Key="TotalAmount">Ukupno:</sys:String>
+    <sys:String x:Key="Price">Cijena:</sys:String>
+    <sys:String x:Key="UpdateStatus">💾 Ažuriraj Status</sys:String>
+    <sys:String x:Key="InvoiceDate">Datum Računa:</sys:String>
+    <sys:String x:Key="OrderDate">Datum Narudžbe:</sys:String>
+    <sys:String x:Key="Client">Klijent:</sys:String>
+    <sys:String x:Key="Current">Trenutni status: </sys:String>
+    <sys:String x:Key="Loading">Učitavanje...</sys:String>
+
+    <sys:String x:Key="DayMonday">Ponedjeljak</sys:String>
+    <sys:String x:Key="DayTuesday">Utorak</sys:String>
+    <sys:String x:Key="DayWednesday">Srijeda</sys:String>
+    <sys:String x:Key="DayThursday">Četvrtak</sys:String>
+    <sys:String x:Key="DayFriday">Petak</sys:String>
+    <sys:String x:Key="DaySaturday">Subota</sys:String>
+    <sys:String x:Key="DaySunday">Nedjelja</sys:String>
+
+    <sys:String x:Key="English">🌐 Engleski</sys:String>
+    <sys:String x:Key="Serbian">🌐 Srpski</sys:String>
+    <sys:String x:Key="Light">☀️ Svijetla</sys:String>
+    <sys:String x:Key="Dark">🌙 Tamna</sys:String>
+    <sys:String x:Key="Neutral">🍃 Neutralna</sys:String>
+
+    <sys:String x:Key="NameLabel">NAZIV</sys:String>
+    <sys:String x:Key="AddressLabel">ADRESA</sys:String>
+    <sys:String x:Key="CityLabel">GRAD</sys:String>
+    <sys:String x:Key="WorkingHoursLabel">RADNO VRIJEME⏱️</sys:String>
+    <sys:String x:Key="WorkingHoursManagerLabel">RADNO VRIJEME</sys:String>
+    <sys:String x:Key="PhoneLabel">TELEFON</sys:String>
+    <sys:String x:Key="OrderLabel">NARUČI</sys:String>
+    <sys:String x:Key="LocationInfoLabel">LOKACIJA🏠</sys:String>
+    <sys:String x:Key="PriceList">CJENOVNIK🧾</sys:String>
+    <sys:String x:Key="PublicationDate">Datum objavljivanja</sys:String>
+
+    <sys:String x:Key="SelectLabel">ODABERI</sys:String>
+    <sys:String x:Key="IdLabel">ID</sys:String>
+    <sys:String x:Key="ActionsLabel">AKCIJE</sys:String>
+    <sys:String x:Key="ContactInfoLabel">KONTAKT TELEFON📞</sys:String>
+    <sys:String x:Key="BasicInfoLabel">OSNOVNE INFORMACIJE</sys:String>
+    <sys:String x:Key="EmployeesLabel">ZAPOSLENI</sys:String>
+    <sys:String x:Key="UsernameLabel">KORISNIČKO IME</sys:String>
+    <sys:String x:Key="EmailLabel">EMAIL</sys:String>
+    <sys:String x:Key="FirstNameLabel">IME</sys:String>
+    <sys:String x:Key="LastNameLabel">PREZIME</sys:String>
+    <sys:String x:Key="PasswordLabel">LOZINKA</sys:String>
+    <sys:String x:Key="FullNameLabel">IME I PREZIME</sys:String>
+    <sys:String x:Key="EmploymentDateLabel">DATUM ZAPOSLENJA</sys:String>
+    <sys:String x:Key="SalaryLabel">PLATA</sys:String>
+    <sys:String x:Key="PriceLabel">CIJENA</sys:String>
+    <sys:String x:Key="DurationLabelFormat">TRAJANJE (HH:MM:SS)</sys:String>
+    <sys:String x:Key="DurationLabel">TRAJANJE</sys:String>
+    <sys:String x:Key="DescriptionLabel">OPIS</sys:String>
+    <sys:String x:Key="ServiceTypeIdLabel">ID TIPA USLUGE</sys:String>
+    <sys:String x:Key="ShiftNameLabel">NAZIV SMJENE</sys:String>
+    <sys:String x:Key="EndTimeLabel">ZAVRŠNO VRIJEME</sys:String>
+    <sys:String x:Key="StartTimeLabel">POČETNO VRIJEME</sys:String>
+    <sys:String x:Key="AvailabilityLabel">DOSTUPNOST</sys:String>
+    <sys:String x:Key="ServicesLabel">USLUGE</sys:String>
+    <sys:String x:Key="ProductsLabel">PROIZVODI</sys:String>
+    <sys:String x:Key="ServiceTypesLabel">TIPOVI USLUGA</sys:String>
+    <sys:String x:Key="ShiftsLabel">SMJENE</sys:String>
+
+    <sys:String x:Key="EditSalonInfoBTN">Izmijeni informacije o salonu</sys:String>
+    <sys:String x:Key="SaveChangesBTN">Sačuvaj promjene</sys:String>
+    <sys:String x:Key="AllCities">Svi Gradovi</sys:String>
+    <sys:String x:Key="AllServices">Sve Usluge</sys:String>
+
+    <sys:String x:Key="NamePlaceholder">Naziv</sys:String>
+    <sys:String x:Key="PricePlaceholder">Cijena</sys:String>
+    <sys:String x:Key="DurationPlaceholder">Trajanje (hh:mm:ss)</sys:String>
+    <sys:String x:Key="DescriptionPlaceholder">Opis</sys:String>
+    <sys:String x:Key="TypeIdPlaceholder">Id tipa usluge</sys:String>
+    <sys:String x:Key="StartTimePlaceholder">Vrijeme početka (hh:mm)</sys:String>
+    <sys:String x:Key="EndTimePlaceholder">Vrijeme kraja (hh:mm)</sys:String>
+    <sys:String x:Key="FromDate">Od Datuma:</sys:String>
+    <sys:String x:Key="ToDate">Do Datuma:</sys:String>
+    <sys:String x:Key="NewWeeklySchedule">Kreirajte novi sedmični raspored</sys:String>
+    <sys:String x:Key="CreateSchedule">Kreirajte raspored</sys:String>
+    <sys:String x:Key="DatePickerPlaceholder">Izaberite datum</sys:String>
+    <sys:String x:Key="SelectSchedule">Odaberite raspored: </sys:String>
+    <sys:String x:Key="NoSchedulesPlaceholder">Nema dostupnih rasporeda</sys:String>
+    <sys:String x:Key="LoadingSchedulesErrorPlaceholder">Greška prilikom učitavanja rasporeda</sys:String>
+    <sys:String x:Key="ScheduleLoadingError">Raspored nije pronađen.</sys:String>
+    <sys:String x:Key="WorkingHoursClientLabel">Radno vrijeme</sys:String>
+
+    <sys:String x:Key="AddServiceTitle">Dodaj Uslugu</sys:String>
+    <sys:String x:Key="AddProductTitle">Dodaj Proizvod</sys:String>
+    <sys:String x:Key="AddShiftTitle">Dodaj Novu Smjenu</sys:String>
+    <sys:String x:Key="ServiceTypesTitle">Tipovi Usluga</sys:String>
+    <sys:String x:Key="CreateScheduleTitle">Kreirajte Novi Raspored</sys:String>
+    <sys:String x:Key="AddServiceTypeTitle">Dodaj Tip Usluge</sys:String>
+    <sys:String x:Key="ShiftsManagementTitle">Upravljanje smjenama</sys:String>
+    <sys:String x:Key="EditSalaryTitle">Izmjena plate</sys:String>
+    <sys:String x:Key="EditSalaryDescription">Unesite odgovarajući iznos plate:</sys:String>
+    <sys:String x:Key="AddToCartTitle">🛒 Dodaj u korpu</sys:String>
+    <sys:String x:Key="SelectQuantityTitle">Odaberite Količinu</sys:String>
+    <sys:String x:Key="Quantity">Količina:</sys:String>
+    <sys:String x:Key="Total">Ukupno: 0.00 KM</sys:String>
+    <sys:String x:Key="UnitPrice">Jedinična Cijena: {0:F2} KM</sys:String>
+    <sys:String x:Key="CartSummary">{0} artikal(a) • {1:F2} KM</sys:String>
+    <sys:String x:Key="TotalItems">{0} artikal(a)</sys:String>
+    <sys:String x:Key="Items">stavke</sys:String>
+    <sys:String x:Key="InvoicesOverview">Pregled Računa</sys:String>
+    <sys:String x:Key="Refresh">🔄 Osvježi</sys:String>
+    <sys:String x:Key="SalonInvoices">Računi Salona</sys:String>
+    <sys:String x:Key="InvoiceManagementManager">Upravljanje računima i plaćanjima</sys:String>
+    <sys:String x:Key="ClientInvoices">Moji Računi</sys:String>
+    <sys:String x:Key="InvoicesViewClient">Pregled računa i statusa plaćanja</sys:String>
+    <sys:String x:Key="AllStatuses">SVI STATUSI</sys:String>
+    <sys:String x:Key="FilteredOrders">📦 Filtrirane Narudžbe</sys:String>
+    <sys:String x:Key="OrdersNum">narudžba(e)</sys:String>
+    <sys:String x:Key="Shown">prikazano</sys:String>
+    <sys:String x:Key="ChangingFilter">Pokušajte promijeniti filter.</sys:String>
+    <sys:String x:Key="TotalQuantity">Ukupno: {0:F2} KM</sys:String>
+    <sys:String x:Key="NoOrdersYet">Još nema narudžbi</sys:String>
+
+    <sys:String x:Key="EmptyOrderHistory">Istorija vaših narudžbi će se pojaviti ovdje kada obavite kupovinu.</sys:String>
+    <sys:String x:Key="OrderHistory">Istorija narudžbi</sys:String>
+    <sys:String x:Key="NumPlacedOrders">{0} poslanih narudžbi</sys:String>
+    <sys:String x:Key="MarkedInProgress">Narudžba je označena kao "u toku"!</sys:String>
+    <sys:String x:Key="MarkedDelivered">Narudžba je označena kao "isporučena"!</sys:String>
+    <sys:String x:Key="MarkedCancelled">Narudžba je otkazana.</sys:String>
+    <sys:String x:Key="StatusUpdatedSuccessfully">Status narudžbe je uspješno ažuriran!</sys:String>
+    <sys:String x:Key="NewStatus">Novi status:</sys:String>
+    <sys:String x:Key="UpdateOrderStatus">🔄 Ažuriraj status narudžbe</sys:String>
+    <sys:String x:Key="OrderId">📦 Narudžba #{0}</sys:String>
+    <sys:String x:Key="SalonOrders">📦 Narudžbe salona</sys:String>
+    <sys:String x:Key="NoSalonOrders">Za vaš salon još uvijek nema narudžbi.</sys:String>
+    <sys:String x:Key="OrdersHistory">📦 Istorija narudžbi</sys:String>
+    <sys:String x:Key="SalonOrdersCount">{0} narudžbi za salon</sys:String>
+
+    <sys:String x:Key="ActiveCarts">🛒 Aktivne korpe za kupovinu</sys:String>
+    <sys:String x:Key="CartsNum">{0} korpa(e)</sys:String>
+    <sys:String x:Key="CartDescription">{0} artikal(a) • {1:F2} KM</sys:String>
+    <sys:String x:Key="MoreItemsLabel">... i još {0} artikal(a)</sys:String>
+    <sys:String x:Key="NoActiveCartsTitle">Nema aktivnih korpi</sys:String>
+    <sys:String x:Key="NoActiveCartsMessage">Započnite kupovinu da dodate artikle u svoju korpu!</sys:String>
+    <sys:String x:Key="ErrorOpeningCartDetails">Greška pri otvaranju detalja korpe.</sys:String>
+    <sys:String x:Key="OrderPlacedMessage">Narudžba je uspješno kreirana!</sys:String>
+    <sys:String x:Key="ErrorDuringCheckout">Greška tokom završetka kupovine.</sys:String>
+    <sys:String x:Key="ErrorLoadingSummary">Greška pri učitavanju pregleda.</sys:String>
+    <sys:String x:Key="NoActiveCarts">Nema aktivnih korpi</sys:String>
+
+    <sys:String x:Key="EnterRequiredDataHeader">Molimo, unesite potrebne podatke!</sys:String>
+    <sys:String x:Key="AddNewShiftHeader">Dodaj Novu Smjenu</sys:String>
+    <sys:String x:Key="ServiceTypeNameHeader">Unesite naziv novog tipa usluge</sys:String>
+
+    <sys:String x:Key="BtnCancel">Otkaži</sys:String>
+    <sys:String x:Key="BtnEdit">Izmijeni✎</sys:String>
+    <sys:String x:Key="BtnSave">Sačuvaj✓</sys:String>
+    <sys:String x:Key="BtnDelete">Obriši🗑</sys:String>
+    <sys:String x:Key="BtnSubmit">Potvrdi✓</sys:String>
+    <sys:String x:Key="BtnAddNew">Dodaj Novi</sys:String>
+    <sys:String x:Key="BtnAddShift">Dodaj Smjenu</sys:String>
+    <sys:String x:Key="BtnServiceTypes">Tipovi Usluga</sys:String>
+    <sys:String x:Key="BtnAddServiceType">Dodaj Tip Usluge</sys:String>
+    <sys:String x:Key="BtnReset">Resetuj Raspored</sys:String>
+    <sys:String x:Key="BtnResetFilters">Resetuj Filtere</sys:String>
+    <sys:String x:Key="BtnViewPriceList">cjenovnik</sys:String>
+    <sys:String x:Key="BtnOrder">naruči</sys:String>
+    <sys:String x:Key="BtnClose">Zatvori</sys:String>
+    <sys:String x:Key="BtnClearCart">🗑️ Očisti korpu</sys:String>
+    <sys:String x:Key="BtnCheckout">✅ Plaćanje</sys:String>
+    <sys:String x:Key="BtnUpdate">✓ Ažuriraj</sys:String>
+    <sys:String x:Key="BtnMarkPaid">✓ Označi kao plaćeno</sys:String>
+    <sys:String x:Key="BtnViewDetails">👁 Detalji</sys:String>
+    <sys:String x:Key="BtnYes">Da</sys:String>
+    <sys:String x:Key="BtnNo">Ne</sys:String>
+    <sys:String x:Key="BtnCancelOrder">otkaži narudžbu</sys:String>
+
+    <!--Enums-->
+    <!--InvoiceStatus-->
+    <sys:String x:Key="PaidEnumBadge">✓ PLAĆENO</sys:String>
+    <sys:String x:Key="PendingEnumBadge">⏳ NA ČEKANJU</sys:String>
+    <sys:String x:Key="CancelledEnumBadge">⚠ OTKAZANO</sys:String>
+    <sys:String x:Key="PaidEnum">PLAĆENO</sys:String>
+    <sys:String x:Key="PendingEnum">NA ČEKANJU</sys:String>
+    <sys:String x:Key="CancelledEnum">OTKAZANO</sys:String>
+    <!--AccountType-->
+    <sys:String x:Key="ClientEnum">Klijent</sys:String>
+    <sys:String x:Key="BeauticianEnum">Kozmetičar</sys:String>
+    <sys:String x:Key="ManagerEnum">Menadžer</sys:String>
+    <!--OrderStatus-->
+    <sys:String x:Key="PendingOrderEnum">NA ČEKANJU</sys:String>
+    <sys:String x:Key="InProgressOrderEnum">U TOKU</sys:String>
+    <sys:String x:Key="DeliveredOrderEnum">DOSTAVLJENO</sys:String>
+    <sys:String x:Key="CancelledOrderEnum">OTKAZANO</sys:String>
+
+    <sys:String x:Key="Available">Dostupno</sys:String>
+    <sys:String x:Key="Unavailable">Nedostupno</sys:String>
+    <sys:String x:Key="Unknown">Nepoznato</sys:String>
+
+
+    <sys:String x:Key="ValidationError">Greška Validacije</sys:String>
+    <sys:String x:Key="SalaryValidationError">Molimo unesite važeći iznos plate.</sys:String>
+    <sys:String x:Key="AllFieldsRequired">Sva polja su obavezna.</sys:String>
+    <sys:String x:Key="PriceValidationError">Cijena mora biti valjan broj.</sys:String>
+    <sys:String x:Key="TimeValidationError">Vrijeme mora biti u validnom formatu (hh:mm:ss).</sys:String>
+    <sys:String x:Key="ServiceTypeValidationError">ID tipa usluge mora biti valjan broj.</sys:String>
+    <sys:String x:Key="ServiceAddedSuccess">Usluga je uspješno dodana!</sys:String>
+    <sys:String x:Key="ProductAddedSuccess">Proizvod je uspješno dodan!</sys:String>
+    <sys:String x:Key="ShiftAddedSuccess">Smjena je uspješno dodana.</sys:String>
+    <sys:String x:Key="ServiceTypeAddedSuccess">Tip usluge je uspješno dodan!</sys:String>
+
+    <sys:String x:Key="DeletedSuccess">Uspješno obrisano!</sys:String>
+    <sys:String x:Key="AddServiceError">Greška pri dodavanju nove usluge!</sys:String>
+    <sys:String x:Key="AddProductError">Greška pri dodavanju novog proizvoda!</sys:String>
+    <sys:String x:Key="AddShiftError">Greška pri dodavanju smjene. Naziv smjene možda već postoji.</sys:String>
+    <sys:String x:Key="ServiceTypeExistsError">Ovaj tip već postoji.</sys:String>
+ 
+    <sys:String x:Key="ViewDetails">Pogledaj detalje ℹ️</sys:String>
+    <sys:String x:Key="ProductNotIdentified">Nije moguće identifikovati izabrani proizvod.</sys:String>
+    <sys:String x:Key="ProductUnavailable">Ovaj proizvod trenutno nije dostupan.</sys:String>
+    <sys:String x:Key="ProductAdded">Dodat je {0}x {1} u vašu korpu!</sys:String>
+    <sys:String x:Key="ProductAddFailed">Greška prilikom dodavanja proizvoda u korpu. Pokušajte ponovo.</sys:String>
+    <sys:String x:Key="CartEmpty">Korpa je prazna.</sys:String>
+    <sys:String x:Key="CannotCheckout">Nije moguće završiti kupovinu</sys:String>
+    <sys:String x:Key="CartCleared">Korpa je uspješno obrisana.</sys:String>
+    <sys:String x:Key="PartialRemove">Neki artikli nisu mogli biti uklonjeni.</sys:String>
+    <sys:String x:Key="PartialSuccess">Djelimičan uspjeh</sys:String>
+    <sys:String x:Key="MsgSelectQuantity">Molimo izaberite ispravnu količinu.</sys:String>
+    <sys:String x:Key="EnterAddress">Unesite adresu za dostavu.</sys:String>
+    <sys:String x:Key="EnterPhone">Unesite kontakt telefon.</sys:String>
+    <sys:String x:Key="OrderFailed">Neuspješno slanje narudžbe. Pokušajte ponovo.</sys:String>
+    <sys:String x:Key="OrderError">Došlo je do greške prilikom slanja narudžbe.</sys:String>
+    <sys:String x:Key="FailedToRemoveItem">Neuspješno uklanjanje stavke.</sys:String>
+    <sys:String x:Key="FailedToUpdateQuantity">Greška prilikom ažuriranja količine.</sys:String>
+    <sys:String x:Key="FailedToUpdateStatus">Ažuriranje statusa nije uspjelo.</sys:String>
+    <sys:String x:Key="FailedToCancelOrder">Otkazivanje narudžbe nije uspjelo.</sys:String>
+    <sys:String x:Key="ConfirmCancelOrder">Potvrdi otkazivanje narudžbe</sys:String>
+    <sys:String x:Key="OrderCancelled">Narudžba otkazana</sys:String>
+
+
+    <sys:String x:Key="ConfirmDelete">Da li ste sigurni? Ova akcija se ne može poništiti.</sys:String>
+    <sys:String x:Key="ConfirmDeletion">❓    potvrda brisanja</sys:String>
+    
+    <sys:String x:Key="MsgSuccessUpdate">Uspješno ste ažurirali informacije!</sys:String>
+    <sys:String x:Key="MsgErrorUpdate">Greška prilikom ažuriranja informacija.</sys:String>
+
+    <sys:String x:Key="ConfirmLogoutQuestion">Da li ste sigurni da se želite odjaviti?</sys:String>
+    <sys:String x:Key="ConfirmLogout">Potvrda odjave</sys:String>
+
+    <sys:String x:Key="DeleteFailed">Greška prilikom brisanja.</sys:String>
+
+    <sys:String x:Key="LoadingError">Greška prilikom učitavanja informacija.</sys:String>
+
+    <sys:String x:Key="NoMatches">Nije pronađen nijedan kozmetički salon koji odgovara vašim kriterijima.</sys:String>
+    <sys:String x:Key="NoMatchingOrders">Nema odgovarajućih narudžbi.</sys:String>
+    <sys:String x:Key="NoEmplyeesInformation">Nema dostupnih informacija o zaposlenima.</sys:String>
+    <sys:String x:Key="NoOrders">Nije pronađena nijedna narudžba.</sys:String>
+    <sys:String x:Key="NoCartsAndOrders">Nisu pronađene korpe ili narudžbe.</sys:String>
+    <sys:String x:Key="EmptyCart">Korpa je prazna.</sys:String>
+    <sys:String x:Key="NoInvoicesFound">Nisu pronađeni računi</sys:String>
+    <sys:String x:Key="NoInvoicesDescription">Računi će se pojaviti ovdje nakon što narudžbe budu završene</sys:String>
+
+    <sys:String x:Key="RequiredFieldsError">Sva polja su obavezna.</sys:String>
+    <sys:String x:Key="ProductRequiredFieldsError">Naziv i Cijena su obavezni.</sys:String>
+    <sys:String x:Key="InvalidPrice">Cijena mora biti validan broj.</sys:String>
+    <sys:String x:Key="InvalidType">ID tipa usluge mora biti validan broj.</sys:String>
+    <sys:String x:Key="InvalidDuration">Trajanje mora biti u ispravnom formatu (hh:mm:ss).</sys:String>
+    <sys:String x:Key="NewServiceTypeError">Molimo unesite naziv tipa usluge.</sys:String>
+    <sys:String x:Key="SuccessfulAddition">Uspješno dodano!</sys:String>
+    <sys:String x:Key="AdditionError">Greška prilikom dodavanja nove stavke.</sys:String>
+    <sys:String x:Key="TypeExistsError">Ovaj tip već postoji.</sys:String>
+    <sys:String x:Key="ScheduleDateError">Datum početka mora biti prije datuma završetka.</sys:String>
+    <sys:String x:Key="ScheduleCreatedSuccessfully">Raspored je uspješno kreiran.</sys:String>
+    <sys:String x:Key="ScheduleCreateError">Greška prilikom kreiranja rasporeda.</sys:String>
+    <sys:String x:Key="MsgSuccessSave">Uspješno sačuvano.</sys:String>
+    <sys:String x:Key="MsgErrorSave">Greške prilikom čuvanja rasporeda.</sys:String>
+    <sys:String x:Key="MsgFilterError">Greška prilikom filtriranja.</sys:String>
+
+    <sys:String x:Key="ChangeThemeTooltip">Promijeni temu</sys:String>
+    <sys:String x:Key="ChangeLanguageTooltip">Promijeni jezik</sys:String>
+    <sys:String x:Key="LogoutTooltip">Odjavi se</sys:String>
+    <sys:String x:Key="MyProfileTooltip">Moj profil</sys:String>
+    <sys:String x:Key="EditTooltip">izmijeni</sys:String>
+    <sys:String x:Key="DeleteTooltip">obriši</sys:String>
+    <sys:String x:Key="SubmitTooltip">potvrdi</sys:String>
+    <sys:String x:Key="SaveTooltip">sačuvaj</sys:String>
+    <sys:String x:Key="AddNewTooltip">dodaj Novi</sys:String>
+    <sys:String x:Key="AddTooltip">dodaj novi tip usluge</sys:String>
+    <sys:String x:Key="CloseTooltip">zatvori</sys:String>
+    <sys:String x:Key="OrderTooltip">naruči proizvod</sys:String>
+    <sys:String x:Key="RefreshTooltip">osvježi</sys:String>
+    <sys:String x:Key="IncreaseTooltip">povećaj</sys:String>
+    <sys:String x:Key="DecreaseTooltip">smanji</sys:String>
+    <sys:String x:Key="SearchBoxTooltip">unesite tekst za pretragu</sys:String>
+    <sys:String x:Key="SearchTooltip">pretraži po nazivu, gradu ili adresi</sys:String>
+    <sys:String x:Key="SearchButtonTooltip">pretraži</sys:String>
+
+    <sys:String x:Key="Success">Uspješno</sys:String>
+    <sys:String x:Key="Error">Greška</sys:String>
+    <sys:String x:Key="Status">Status</sys:String>
+    <sys:String x:Key="Info">Info</sys:String>
+    <sys:String x:Key="InvoiceDetailsTitle">Detalji o računu</sys:String>
+
+    <sys:String x:Key="MarkInvoiceAsPaid">Označi račun #{0} kao plaćen?</sys:String>
+    <sys:String x:Key="ClearCartConfirmation">Da li ste sigurni da želite obrisati cijelu korpu?</sys:String>
+    <sys:String x:Key="ConfirmMarkOrder">Da li ste sigurni da želite da označite ovu narudžbu kao {0}? Ova akcija se ne može opozvati.</sys:String>
+    <sys:String x:Key="ConfirmRemoveFromCart">Da li ste sigurni da želite da uklonite {0} iz korpe?</sys:String>
+    <sys:String x:Key="InvoiceClient">Klijent: {0} {1}</sys:String>
+
+
+</ResourceDictionary>

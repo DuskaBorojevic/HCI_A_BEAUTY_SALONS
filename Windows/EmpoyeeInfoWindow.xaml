@@ -1,0 +1,183 @@
+﻿<Window x:Class="HCI_A.Windows.EmployeeInfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HCI_A.Windows"
+        mc:Ignorable="d"
+        Title="{DynamicResource EmployeeInformationTitle}" 
+        Height="600" Width="800"
+        WindowStartupLocation="CenterScreen"
+        FontFamily="{DynamicResource DefaultFont}"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        Background="Transparent">
+
+    <Border Background="{DynamicResource BackgroundBrush}"
+            CornerRadius="15"
+            BorderBrush="{DynamicResource PrimaryBrush}"
+            BorderThickness="2"
+            Effect="{DynamicResource MaterialShadow}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" 
+                    Background="{DynamicResource PrimaryBrush}" 
+                    CornerRadius="15,15,0,0"
+                    Padding="30,20">
+                <Grid>
+                    <TextBlock x:Name="EmployeeNameText" 
+                               FontSize="28" 
+                               FontWeight="SemiBold" 
+                               Foreground="{DynamicResource TextOnPrimaryBrush}" 
+                               HorizontalAlignment="Center"/>
+                    <Button x:Name="CloseButton" HorizontalAlignment="Right" VerticalAlignment="Center" Width="35" Height="35" Background="Transparent" BorderThickness="0" Cursor="Hand" Click="CloseButton_Click">
+                        <TextBlock Text="✕" FontSize="18" FontWeight="Bold" Foreground="{DynamicResource TextOnPrimaryBrush}"/>
+                    </Button>
+                    
+                </Grid>
+            </Border>
+
+
+            <ScrollViewer Grid.Row="1" Padding="30,20" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+
+                    <Border Background="{DynamicResource CardBrush}"
+                            BorderBrush="{DynamicResource BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="25"
+                            Margin="0,0,0,20">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource BasicInfoLabel}" 
+                                       FontSize="18" 
+                                       FontWeight="SemiBold" 
+                                       Foreground="{DynamicResource PrimaryBrush}"
+                                       Margin="0,0,0,15"/>
+
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{DynamicResource UsernameLabel}" 
+                                           FontWeight="SemiBold" 
+                                           Foreground="{DynamicResource TextSecondaryBrush}" 
+                                           VerticalAlignment="Center"/>
+                                <TextBlock x:Name="UsernameText" Grid.Column="1" 
+                                           FontSize="14" 
+                                           Foreground="{DynamicResource TextBrush}" 
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{DynamicResource EmailLabel}" 
+                                           FontWeight="SemiBold" 
+                                           Foreground="{DynamicResource TextSecondaryBrush}" 
+                                           VerticalAlignment="Center"/>
+                                <TextBlock x:Name="EmailText" Grid.Column="1" 
+                                           FontSize="14" 
+                                           Foreground="{DynamicResource TextBrush}" 
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{DynamicResource FullNameLabel}" 
+                                           FontWeight="SemiBold" 
+                                           Foreground="{DynamicResource TextSecondaryBrush}" 
+                                           VerticalAlignment="Center"/>
+                                <TextBlock x:Name="FullNameText" Grid.Column="1" 
+                                           FontSize="14" 
+                                           Foreground="{DynamicResource TextBrush}" 
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{DynamicResource AddressLabel}" 
+                                           FontWeight="SemiBold" 
+                                           Foreground="{DynamicResource TextSecondaryBrush}" 
+                                           VerticalAlignment="Center"/>
+                                <TextBlock x:Name="AddressText" Grid.Column="1" 
+                                           FontSize="14" 
+                                           Foreground="{DynamicResource TextBrush}" 
+                                           VerticalAlignment="Center" 
+                                           TextWrapping="Wrap"/>
+                            </Grid>
+
+                            <Grid Margin="0,5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{DynamicResource EmploymentDateLabel}" 
+                                           FontWeight="SemiBold" 
+                                           Foreground="{DynamicResource TextSecondaryBrush}" 
+                                           VerticalAlignment="Center"/>
+                                <TextBlock x:Name="EmploymentDateText" Grid.Column="1" 
+                                           FontSize="14" 
+                                           Foreground="{DynamicResource TextBrush}" 
+                                           VerticalAlignment="Center"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                    
+                    <Border Background="{DynamicResource CardBrush}"
+                            BorderBrush="{DynamicResource BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="8"
+                            Padding="25"
+                            Margin="0,0,0,20">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource SalaryLabel}" 
+                                       FontSize="18" 
+                                       FontWeight="SemiBold" 
+                                       Foreground="{DynamicResource PrimaryBrush}"
+                                       Margin="0,0,0,15"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:Name="SalaryText" Grid.Column="0" 
+                                           FontSize="14" 
+                                           Foreground="{DynamicResource TextBrush}" 
+                                           VerticalAlignment="Center"/>
+                                <Button x:Name="EditSalaryButton" Grid.Column="1" 
+                                        Margin="20,0,0,0" Padding="15,5" 
+                                        HorizontalAlignment="Left" 
+                                        Click="EditSalaryButton_Click"
+                                        Style="{StaticResource EditButton}" Height="40" VerticalAlignment="Center" Width="60"/>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </ScrollViewer>
+
+            <Border Grid.Row="2" 
+                    Background="{DynamicResource SurfaceBrush}" 
+                    BorderBrush="{DynamicResource BorderBrush}"
+                    BorderThickness="0,1,0,0"
+                    CornerRadius="0,0,15,15"
+                    Padding="30,20">
+                <Button x:Name="DeleteButton" Content="{DynamicResource BtnDelete}" Style="{StaticResource ErrorTextButton}" Margin="300,0,300,0" Click="DeleteButton_Click" Height="40"/>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

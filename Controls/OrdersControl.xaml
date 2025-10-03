@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="HCI_A.Controls.OrdersControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HCI_A.Controls"
+             xmlns:models="clr-namespace:HCI_A.Models"
+             Background="{DynamicResource BackgroundBrush}"
+             FontFamily="{DynamicResource DefaultFont}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0"
+                Background="{DynamicResource SecondaryLightBrush2}"
+                BorderBrush="{DynamicResource BorderBrush}"
+                BorderThickness="0,0,0,1"
+                Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/> 
+                    <ColumnDefinition Width="Auto"/> 
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock Text="📦" 
+                              FontSize="24" 
+                              VerticalAlignment="Center" 
+                              Margin="0,0,10,0"
+                              Foreground="{DynamicResource PrimaryLightBrush}"/>
+                    <StackPanel>
+                        <TextBlock Text="{DynamicResource Orders}" 
+                                  FontSize="18" 
+                                  FontWeight="Bold"
+                                  FontFamily="{DynamicResource TitleFont}"
+                                  Foreground="{DynamicResource PrimaryBrush}"/>
+                        <TextBlock x:Name="OrderSummaryText" 
+                                  Text="{DynamicResource Loading}" 
+                                  FontSize="12"
+                                  Foreground="{DynamicResource TextSecondaryBrush}"/>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,0,15,0">
+                    <TextBlock Text="Status:" 
+                              VerticalAlignment="Center" 
+                              Margin="0,0,5,0"
+                              Foreground="{DynamicResource TextSecondaryBrush}"/>
+                    <ComboBox x:Name="StatusFilterCombo" 
+                      MinWidth="120"
+                      Height="30"
+                      VerticalContentAlignment="Center"
+                      Padding="5,0"
+                      SelectionChanged="StatusFilter_Changed"/>
+                </StackPanel>
+
+                <Button x:Name="RefreshButton"
+                        Grid.Column="2"
+                        Content="🔄"
+                        Style="{DynamicResource PrimaryIconButton}"
+                        Click="RefreshButton_Click"
+                        ToolTip="{DynamicResource RefreshTooltip}"
+                        Width="40"
+                        Height="40"/>
+            </Grid>
+        </Border>
+
+        <ScrollViewer Grid.Row="1" 
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel x:Name="OrdersPanel" Margin="20"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,235 @@
+﻿<Window x:Class="HCI_A.Windows.ClientMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HCI_A.Windows"
+        xmlns:controls="clr-namespace:HCI_A.Controls"
+        mc:Ignorable="d"
+        Title="{DynamicResource ClientMainPageTitle}" 
+        Height="700" 
+        Width="1200"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip"
+        FontFamily="{DynamicResource DefaultFont}"
+        Background="{DynamicResource BackgroundBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" 
+                Background="{DynamicResource PrimaryBrush}" 
+                Effect="{DynamicResource MaterialShadow}">
+            <Grid>
+                <StackPanel Orientation="Horizontal" 
+                            VerticalAlignment="Center"
+                            Margin="25,0">
+                    <TextBlock x:Name="WelcomeLabel" 
+                               Foreground="White"
+                               FontFamily="{DynamicResource SecondaryFont}"
+                               FontSize="22" 
+                               Margin="30,0,0,0"
+                               VerticalAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" 
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Margin="0,0,25,0">
+
+                    <!--Theme and Language Selector-->
+                    <controls:ThemeLanguageSelector Margin="0,0,15,0"/>
+
+                    <Button x:Name="ProfileButton"
+                            Style="{DynamicResource IconButtonStyle}"
+                            Width="40"
+                            Height="40"
+                            Margin="0,0,15,0"
+                            Click="ProfileButton_Click"
+                            ToolTip="{DynamicResource MyProfileTooltip}">
+                        <Path Data="{DynamicResource UserIcon}" 
+                              Fill="White" 
+                              Stretch="Uniform" 
+                              Width="22" 
+                              Height="22"/>
+                    </Button>
+
+                    <Button x:Name="LogoutButton"
+                            Style="{DynamicResource IconButtonStyle}"
+                            Width="40"
+                            Height="40"
+                            Click="LogoutButton_Click"
+                            ToolTip="{DynamicResource LogoutTooltip}">
+                        <Path Data="{DynamicResource LogoutIcon}" 
+                              Fill="White" 
+                              Stretch="Uniform" 
+                              Width="22" 
+                              Height="22"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Grid Grid.Row="1" Margin="25,20">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <TextBlock Grid.Row="0" 
+                           Text="{DynamicResource AvailableBeautySalons}" 
+                           FontSize="24" 
+                           FontWeight="SemiBold"
+                           FontFamily="{DynamicResource TitleFont}"
+                           Margin="0,0,0,20"
+                           Foreground="{DynamicResource PrimaryDarkBrush}"/>
+
+
+                <Border Grid.Row="1" 
+                        Style="{DynamicResource CardStyle}"
+                        Background="{DynamicResource SecondaryLightBrush}"
+                        Margin="0,0,0,20">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel x:Name="SalonsPanel" Margin="20">
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+                <Border Grid.Row="2" 
+        Style="{DynamicResource CardStyle}"
+        Padding="20,15">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="220"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Column="0" 
+                   Text="{DynamicResource City}" 
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,0"/>
+                        <ComboBox Grid.Column="1" x:Name="CityComboBox"
+                  Width="120"
+                  Padding="6,4"
+                  Background="{DynamicResource SecondaryLightBrush}"
+                  VerticalContentAlignment="Center"/>
+
+                        <TextBlock Grid.Column="2" 
+                   Text="{DynamicResource ServiceType}" 
+                   VerticalAlignment="Center"
+                   Margin="20,0,10,0"/>
+                        <ComboBox Grid.Column="3" x:Name="ServiceComboBox"
+                  Width="120"
+                  Padding="6,4"
+                  VerticalContentAlignment="Center"/>
+
+                <Button Grid.Column="4" x:Name="FilterButton"
+                Style="{DynamicResource PrimaryTextButton}"
+                HorizontalAlignment="Left"
+                Height="42"
+                Width="150"
+                Click="FilterButton_Click"
+                Margin="20,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Path Data="{DynamicResource FilterIcon}" Fill="White" Width="16" Height="16" Margin="0,0,5,0"/>
+                                <TextBlock Text="{DynamicResource ApplyFilter}" FontSize="14" FontFamily="{DynamicResource ButtonFont}"/>
+                            </StackPanel>
+                        </Button>
+
+     
+                        <TextBox Grid.Column="6" x:Name="SearchTextBox"
+                VerticalContentAlignment="Center"
+                Padding="10,6"
+                Margin="0,0,0,0"
+                Width="220"
+                KeyDown="SearchTextBox_KeyDown"
+                ToolTip="{DynamicResource SearchTooltip}"
+                Text="{DynamicResource SearchBoxTooltip}"
+                Foreground="Gray"
+                GotFocus="SearchTextBox_GotFocus"
+                LostFocus="SearchTextBox_LostFocus"
+                Height="44" VerticalAlignment="Top"/>
+                <Button Grid.Column="7" x:Name="SearchButton"
+                Content="🔍"
+                FontSize="14"
+                FontFamily="{DynamicResource ButtonFont}"
+                ToolTip="{DynamicResource SearchButtonTooltip}"
+                Style="{DynamicResource PrimaryIconButton}"
+                HorizontalAlignment="Right"
+                Height="40"
+                Margin="20,0,30,0"
+                Click="SearchButton_Click"/>
+
+
+                <Button Grid.Column="8" x:Name="ResetButton"
+                Style="{DynamicResource PrimaryLargeButton}"
+                HorizontalAlignment="Right"
+                Height="42"
+                Width="150"
+                Click="ResetButton_Click"
+                Margin="20,0,0,0">
+                            <TextBlock Text="{DynamicResource BtnResetFilters}" FontFamily="{DynamicResource ButtonFont}" FontSize="14"/>
+                        </Button>
+
+                    </Grid>
+                </Border>
+
+            </Grid>
+
+
+            <Popup x:Name="ProfilePopup" 
+                   PlacementTarget="{Binding ElementName=ProfileButton}" 
+                   Placement="Bottom"
+                   StaysOpen="False"
+                   AllowsTransparency="True">
+
+                <Border Background="{DynamicResource PrimaryLightBrush}"  
+                        BorderBrush="{DynamicResource SurfaceBrush}" 
+                        BorderThickness="1" 
+                        CornerRadius="8"
+                        Width="200"
+                        Effect="{DynamicResource MaterialShadow}">
+                    <StackPanel Margin="10">
+                        <Button x:Name="ViewProfileButton" 
+                                Content="{DynamicResource MyProfile}" 
+                                Style="{DynamicResource MenuButtonStyle}"
+                                Click="ViewProfileButton_Click"/>
+                        <Separator Margin="0,5"/>
+                        <Button x:Name="ViewCartsButton" 
+                                Content="{DynamicResource MyCarts}" 
+                                Style="{DynamicResource MenuButtonStyle}"
+                                Click="ViewCartsButton_Click"/>
+                        <Separator Margin="0,5"/>
+                        
+                        <Button x:Name="ViewOrdersButton" 
+                                Content="{DynamicResource MyOrders}" 
+                                Style="{DynamicResource MenuButtonStyle}"
+                                Click="ViewOrdersButton_Click"/>
+                        <Separator Margin="0,5"/>
+                        
+                        <Button x:Name="ViewInvoicesButton" 
+                                Content="{DynamicResource MyInvoices}" 
+                                Style="{DynamicResource MenuButtonStyle}"
+                                Click="ViewInvoicesButton_Click"/>
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </Grid>
+    </Grid>
+</Window>
